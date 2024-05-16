@@ -1,0 +1,205 @@
+:root {
+  --color--main: #0fe4d2;
+}
+
+
+h2 {
+  text-align: center;
+  padding: 4% 0 1%;
+  font-size: 2em;
+}
+
+h3 {
+  padding: 4% 0 0 0;
+}
+
+p {
+  line-height: 1.7em;
+  font-size: 1.1em;
+  color: #030303;
+}
+
+section {
+  background: #000000;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #000000, #434343);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #000000, #434343 ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.nav-link:hover {
+  background-color: #636262;
+}
+
+.nav-link:focus {
+  background-color: #282828;
+}
+
+.nav_bg {
+  background-color: #000000;
+}
+
+.logo {
+  color: #190601;
+  font-size: 1.2em;
+}
+/* 
+The logo setting is to control the S, K, N heading on the first image */
+
+.section-bg {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* I had the settings for the front page figured out above then proceeded to have a different background image for the rest  */
+
+.dry-bg {
+  background-image: url("../images/dryskin.jpg");
+}
+
+.oily-bg {
+  background-image: url("../images/oily.jpg");
+}
+
+.comb-bg {
+  background-image: url("../images/comb.jpg");
+}
+
+.section-bg h1 {
+  font-size: 7em;
+  color: #fff;
+}
+
+.col img {
+  width: 100%;
+  border-radius: 50%;
+  transition: transform 0.3s;
+  /* this affects the three images that are in the treatments section */
+}
+
+.col:hover img {
+  transform: scale(0.8);
+}
+
+.test {
+  margin: 0 0 0 10%;
+}
+.test h2 {
+  color: #fff;
+}
+.test p {
+  color: #fff;
+}
+
+.image-container {
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.list p {
+  padding: 5% 0;
+}
+
+.treat p {
+  margin: 0 5% 5% 5%;
+  text-align: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 576px) {
+  .test {
+    margin: 0;
+  }
+  .test p {
+    padding: 5% 0;
+  }
+  p {
+    font-size: 1em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  h3 {
+    font-size: 1.4em;
+  }
+}
+@media (max-width: 768px) {
+  .section-bg {
+    height: 300px;
+  }
+  .section-bg h1 {
+    font-size: 4em;
+  }
+  /* there is only one section and it affects the fiirst image that appears on the screen and the heading  */
+}/*# sourceMappingURL=main.css.map */
+
+
+
+/* image reveal */
+
+.img-container2 {
+  margin: 0px auto;
+  position: relative;
+  width: 600px;
+  height: 320px;
+  overflow: hidden;
+  visibility: hidden;
+  
+  .img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 600px;
+    width: 300px;
+    background-color: white;
+    z-index: 2;
+  }
+  
+  img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+/* Header Reveal */
+
+.reveal {
+  overflow: hidden;
+}
+
+.reveal > * {
+  position: relative; 
+  transform: translateY(150%) rotate(10deg);
+  animation: reveal 1.5s cubic-bezier(.77,0,.18,1) forwards;
+}
+ 
+@keyframes reveal {
+  100% {
+    transform: translateY(0%) rotate(0deg);
+  }
+}
+
+.body-background {
+  background: #8e9eab;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
